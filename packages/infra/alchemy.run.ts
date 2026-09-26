@@ -46,7 +46,7 @@ export const web = Cloudflare.Website.Vite("web", {
     EMAIL_FROM: Config.string("EMAIL_FROM").pipe(Config.withDefault("hello@feedback.happywebs.co.uk")),
     EMAIL_FROM_NAME: Config.string("EMAIL_FROM_NAME").pipe(Config.withDefault("Happy Webs")),
     // The feedback. subdomain is send-only; replies go to the Workspace inbox.
-    EMAIL_REPLY_TO: Config.string("EMAIL_REPLY_TO").pipe(Config.withDefault("hello@happywebs.co.uk")),
+    EMAIL_REPLY_TO: Config.string("EMAIL_REPLY_TO").pipe(Config.withDefault("support@happywebs.co.uk")),
     // Self-hosters point the footer at their own policies and their fork.
     LEGAL_TERMS_URL: Config.string("LEGAL_TERMS_URL").pipe(Config.withDefault("https://happywebs.co.uk/terms-of-service/")),
     LEGAL_PRIVACY_URL: Config.string("LEGAL_PRIVACY_URL").pipe(Config.withDefault("https://happywebs.co.uk/privacy-policy/")),
