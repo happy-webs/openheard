@@ -44,6 +44,10 @@ export const web = Cloudflare.Website.Vite("web", {
     ROOT_DOMAIN: Config.string("ROOT_DOMAIN").pipe(Config.withDefault("")),
     EMAIL_FROM: Config.string("EMAIL_FROM").pipe(Config.withDefault("")),
     EMAIL_FROM_NAME: Config.string("EMAIL_FROM_NAME").pipe(Config.withDefault("")),
+    // Self-hosters point the footer at their own policies and their fork.
+    LEGAL_TERMS_URL: Config.string("LEGAL_TERMS_URL").pipe(Config.withDefault("")),
+    LEGAL_PRIVACY_URL: Config.string("LEGAL_PRIVACY_URL").pipe(Config.withDefault("")),
+    SOURCE_URL: Config.string("SOURCE_URL").pipe(Config.withDefault("")),
     GOOGLE_CLIENT_ID: Config.string("GOOGLE_CLIENT_ID").pipe(Config.withDefault("")),
     GOOGLE_CLIENT_SECRET: Config.string("GOOGLE_CLIENT_SECRET").pipe(Config.withDefault("")),
     CF_ACCESS_TEAM_DOMAIN: Config.string("CF_ACCESS_TEAM_DOMAIN").pipe(Config.withDefault("")),
