@@ -25,8 +25,8 @@ export const uploadIpLimit = Cloudflare.RateLimit("UPLOAD_IP_LIMIT", { namespace
 
 export const web = Cloudflare.Website.Vite("web", {
   rootDir: "../../apps/web",
-  // TradeCatalog: served on feedback.tradecatalog.app; no US placement hint.
-  domain: "feedback.tradecatalog.app",
+  // Happy Webs feedback hub (one board per product); the old TradeCatalog address redirects.
+  domain: { name: "feedback.happywebs.co.uk", redirects: ["feedback.tradecatalog.app"] },
   compatibility: {
     flags: ["nodejs_compat"],
   },
